@@ -62,7 +62,7 @@ class InfiniteCanvas(tk.Canvas):
         self.event_generate('<<Scroll>>')    
         self.event_add('<<Zoom>>',              '<Alt-MouseWheel>')
         self.event_generate('<<ViewConfigure>>')
-        self.bind('<<Scroll>>', lambda e:print(e))
+##        self.bind('<<Scroll>>', lambda e:print(e))
         self.bind(#MouseWheel
             '<<VerticalScroll>>',   lambda e:self._wheel_scroll(e,'y'))
         self.bind(#Shift+MouseWheel
@@ -73,7 +73,7 @@ class InfiniteCanvas(tk.Canvas):
             '<<DragView>>',         self._drag_scroll)
         self.event_generate('<<ItemsDropped>>') #invoked in _update_tags
         self.event_generate('<<ItemsEntered>>') #invoked in _update_tags
-        self.bind('<<ItemsDropped>>', lambda e:print('d',self.dropped))
+##        self.bind('<<ItemsDropped>>', lambda e:print('d',self.dropped))
 ##        self.bind('<<ItemsEntered>>', lambda e:print('e',self.entered))
         #Normal bindings
         self.bind(#left click
